@@ -1,0 +1,12 @@
+[ 2017-06-14T18:24:47+08:00 ] 192.168.33.1 /index.php?g=portal&m=index&a=area
+ERR: XML标签语法错误 : condition='$cat eq \'驰名商标\' '
+
+[ 2017-06-14T18:25:03+08:00 ] 192.168.33.1 /index.php?g=portal&m=index&a=area
+ERR: XML标签语法错误 : condition='$cat eq '驰名商标' '
+
+[ 2017-06-14T18:26:12+08:00 ] 192.168.33.1 /index.php?g=portal&m=index&a=area
+ERR: XML标签语法错误 : condition='$cat eq '驰名商标' '
+
+[ 2017-06-14T18:27:43+08:00 ] 192.168.33.1 /index.php?g=portal&m=index&a=area
+ERR: XML标签语法错误 : condition="$cat eq 驰名商标 '
+
