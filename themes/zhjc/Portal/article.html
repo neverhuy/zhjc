@@ -1,0 +1,18 @@
+<tc_include file="Public:header" />
+
+<div class="p30">
+    <div class='w1000 center route'>
+        <span>您的位置：</span><a href="/">首页</a> <span> > </span><a href="#">内容详情</a>
+    </div>
+
+    <php>
+        $post = sp_sql_post($pid);
+    </php>
+    <div class="article center ">
+        <h3 class="title">{$post.post_title}</h3>
+        <section>
+            {$post.post_content}
+        </section>
+    </div>
+</div>
+<tc_include file="Public:footer" />

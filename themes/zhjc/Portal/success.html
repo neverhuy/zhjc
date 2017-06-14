@@ -1,0 +1,38 @@
+<tc_include file="Public:header"/>
+
+<div class="content">
+    <!--成功案例-->
+    <php>
+        $tag = 'cid:3;order:post_date desc';
+        $posts = sp_sql_posts_paged($tag,3);
+    </php>
+    <div class="case mb80">
+        <div class="floor w1000 center">
+            <h2>SUCCESSFUL CASE</h2>
+            <h3>成功案例</h3>
+            <div class="cases-wrapper clearfix">
+                <ul class="cases">
+                    <foreach name="posts['posts']" item="vo">
+                        <php>
+                            $smeta=json_decode($vo['smeta'],true);
+                        </php>
+                        <li>
+                            <a href="/index.php?g=portal&m=index&a=detail&pid={$vo.object_id}" class="case-img">
+                                <img src="/data/upload/{$smeta.thumb}" alt="">
+                            </a>
+                            <a class="case-name" href="/index.php?g=portal&m=index&a=detail&pid={$vo.object_id}">{$vo.post_title}</a>
+                        </li>
+                    </foreach>
+
+                </ul>
+            </div>
+
+            <div class="case-pages-wrapper center">
+                <ul class="pager"> {$posts.page}</ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<tc_include file="Public:footer"/>
