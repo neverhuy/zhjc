@@ -331,10 +331,9 @@ ul, li {
     border: 1px solid #e4e4e4;
 }
 
-.business .bx-wrapper {
-    width: 1001px !important;
+.business .bx-viewport{
+    width: 103% !important;
 }
-
 .business .bx-wrapper .bx-viewport {
     border: none;
     -moz-box-shadow: none;
