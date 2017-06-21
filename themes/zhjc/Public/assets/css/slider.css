@@ -109,21 +109,22 @@
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
-    left: 10px;
-    background: url(../img/controls.png) no-repeat 0 -32px;
+    left:-32px;
+    background: url(../img/prev_next.png) no-repeat 0 1px;
+    outline:1px solid red;
 }
 
 .bx-wrapper .bx-next {
-    right: 10px;
-    background: url(../img/controls.png) no-repeat -43px -32px;
+    right: -44px;
+    background: url(../img/prev_next.png) no-repeat 1px -34px;
 }
 
-.bx-wrapper .bx-prev:hover {
-    background-position: 0 0;
+.bx-wrapper .bx-prev:hover ,.bx-wrapper .bx-prev.active{
+    background-position: -33px 1px;
 }
 
-.bx-wrapper .bx-next:hover {
-    background-position: -43px 0;
+.bx-wrapper .bx-next:hover, .bx-wrapper .bx-next.active{
+    background-position: -33px -34px;
 }
 
 .bx-wrapper .bx-controls-direction a {
@@ -135,6 +136,7 @@
     height: 32px;
     text-indent: -9999px;
     z-index: 9999;
+
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {
