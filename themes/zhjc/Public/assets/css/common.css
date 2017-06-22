@@ -693,6 +693,7 @@ ul, li {
 
 .advantage {
     background-repeat: no-repeat;
+    background-image: url('../img/about.png');
 }
 
 .intro h3, .culture h3 {
@@ -744,7 +745,9 @@ ul, li {
 .brand .brand-img {
     width: 446px;
     height: 340px;
-    background-image: url('../img/');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/about.png');
     background-color: #f5f5f5;
     overflow: hidden;
 }
