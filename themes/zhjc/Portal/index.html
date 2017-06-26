@@ -109,7 +109,7 @@
             <section>
                 <foreach name="news['posts']" item="vo" key="k">
                     <div class="item item{$k + 1}">
-                        <p>{strtotime($vo['post_date']) | date="Y-m-d",###}</p>
+                        <p>{{$vo['post_date']|substr=0,10}}</p>
                         <p>
                             {$vo.post_title}
                         </p>

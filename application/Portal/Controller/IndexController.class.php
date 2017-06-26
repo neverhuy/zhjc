@@ -80,4 +80,11 @@ class IndexController extends HomebaseController
         $this->display(':area');
     }
 
+    // 企业动态
+    public function news()
+    {
+        $this->assign('title', '企业动态');
+        $this->display(':news');
+    }
+
 }
