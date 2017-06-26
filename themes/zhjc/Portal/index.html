@@ -107,9 +107,9 @@
             <h2>BUSINESS MOVEMENT</h2>
             <h3>企业动态</h3>
             <section>
-                <foreach name="posts['posts']" item="vo" key="k">
+                <foreach name="news['posts']" item="vo" key="k">
                     <div class="item item{$k + 1}">
-                        <p>{$vo['post_date'] | date="Y-m-d",###}</p>
+                        <p>{strtotime($vo['post_date']) | date="Y-m-d",###}</p>
                         <p>
                             {$vo.post_title}
                         </p>
