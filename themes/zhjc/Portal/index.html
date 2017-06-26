@@ -99,40 +99,23 @@
 
     <!--企业动态-->
     <div class="state">
+        <php>
+            $tag = 'cid:10;order:post_date desc';
+            $news = sp_sql_posts_paged($tag,5);
+        </php>
         <div class="floor w1000 center">
             <h2>BUSINESS MOVEMENT</h2>
             <h3>企业动态</h3>
             <section>
-                <div class="item item1">
-                    <p>2017-10-10</p>
-                    <p>
-                        我司代理“特化苏”家具类商标三成功驰名商标“九里诱惑”
-                    </p>
-                </div>
-                <div class="item item2">
-                    <p>2017-10-10</p>
-                    <p>
-                        我司代理“特化苏”家具类商标三成功驰名商标“九里诱惑”
-                    </p>
-                </div>
-                <div class="item item3">
-                    <p>2017-10-10</p>
-                    <p>
-                        我司代理“特化苏”家具类商标三成功驰名商标“九里诱惑”
-                    </p>
-                </div>
-                <div class="item item4">
-                    <p>2017-10-10</p>
-                    <p>
-                        我司代理“特化苏”家具类商标三成功驰名商标“九里诱惑”
-                    </p>
-                </div>
-                <div class="item item5">
-                    <p>2017-10-10</p>
-                    <p>
-                        我司代理“特化苏”家具类商标三成功驰名商标“九里诱惑”
-                    </p>
-                </div>
+                <foreach name="posts['posts']" item="vo" key="k">
+                    <div class="item item{$k + 1}">
+                        <p>{$vo['post_date'] | date="Y-m-d",###}</p>
+                        <p>
+                            {$vo.post_title}
+                        </p>
+                    </div>
+                </foreach>
+
             </section>
             <a class='more center' href="#">查看更多</a>
         </div>

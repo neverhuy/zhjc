@@ -22,30 +22,32 @@
     <div class="top">
         <div class="w1000 center clearfix">
             <div class="logo fl">
-                <a href="#">
+                <a href="/">
                     <img src="/themes/zhjc/Public/assets/img/logo.png" alt="logo">
                 </a>
             </div>
-            <div class="other fr">
-                <a href="#" id="setHome">设为首页</a>
-                <a href="#" id="addFavorite">加入收藏</a>
-                <a class="no-border">联系电话：010-52693075</a>
+            <div class="slogn fl">
+                <img src="/themes/zhjc/Public/assets/img/slogn.jpg" alt="slogn">
+            </div>
+            <div class="phone fr">
+                <img src="/themes/zhjc/Public/assets/img/phone.jpg" alt="phone">
             </div>
         </div>
     </div>
     <div class="nav">
         <div class="w1000 center clearfix">
-            <a href="/">首页</a>
-            <a href="/index.php?g=portal&m=index&a=area">业务范围</a>
-            <a href="/index.php?g=portal&m=index&a=about">关于我们</a>
-            <a href="/index.php?g=portal&m=index&a=share">案例分享</a>
-            <a href="/index.php?g=portal&m=index&a=law">法律法规</a>
-            <a href="/index.php?g=portal&m=index&a=trade">知识产权交易</a>
-            <a href="/index.php?g=portal&m=index&a=about">联系我们</a>
+            <a <?php if($title == '首页'): ?>class = "active"<?php endif; ?> href="/">首页</a>
+            <a <?php if($title == '业务范围'): ?>class = "active"<?php endif; ?> href="/index.php?g=portal&m=index&a=area" >业务范围</a>
+            <a <?php if($title == '关于我们'): ?>class = "active"<?php endif; ?> href="/index.php?g=portal&m=index&a=about">关于我们</a>
+            <a <?php if($title == '案例分享'): ?>class = "active"<?php endif; ?> href="/index.php?g=portal&m=index&a=share">案例分享</a>
+            <a <?php if($title == '法律法规'): ?>class = "active"<?php endif; ?> href="/index.php?g=portal&m=index&a=law">法律法规</a>
+            <a <?php if($title == '知识产权交易'): ?>class = "active"<?php endif; ?> href="/index.php?g=portal&m=index&a=trade">知识产权交易</a>
+            <a <?php if($title == '联系我们'): ?>class = "active"<?php endif; ?> href="/index.php?g=portal&m=index&a=contact">联系我们</a>
         </div>
     </div>
 
 </div>
+
 <!--banner start-->
 <?php $slides=sp_getslide('slide'); ?>
 <div class="banner">
@@ -135,6 +137,7 @@
 
     <!--企业动态-->
     <div class="state">
+        <?php $tag = 'cid:10;order:post_date desc'; $news = sp_sql_posts_paged($tag,5); var_dump($news); ?>
         <div class="floor w1000 center">
             <h2>BUSINESS MOVEMENT</h2>
             <h3>企业动态</h3>
@@ -188,96 +191,12 @@
                     <p class="p3">QQ： 26930752</p>
                 </div>
                 <div class="right fr">
-                    <div style="width:597px;height:256px;border:#ccc solid 1px;" id="dituContent"></div>
+                    <div style="width:597px;height:256px;border:#ccc solid 1px;" id="dituContent">
+                        <a href="http://ditu.amap.com/search?id=B000A80WQ2&city=110102&geoobj=116.508685%7C39.903527%7C116.512859%7C39.905218&query_type=IDQ&query=%E5%8D%8E%E7%9D%A6%E5%A4%A7%E5%8E%A6&zoom=18">
+                            <img src="/themes/zhjc/Public/assets/img/map.jpg" alt="" style="width: 100%;">
+                        </a>
+                    </div>
                     <!--百度地图容器-->
-                    <script type="text/javascript">
-                        //创建和初始化地图函数：
-                        function initMap(){
-                            createMap();//创建地图
-                            setMapEvent();//设置地图事件
-                            addMapControl();//向地图添加控件
-                            addMarker();//向地图中添加marker
-                        }
-
-                        //创建地图函数：
-                        function createMap(){
-                            var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-                            var point = new BMap.Point(116.331249,39.889262);//定义一个中心点坐标
-                            map.centerAndZoom(point,17);//设定地图的中心点和坐标并将地图显示在地图容器中
-                            window.map = map;//将map变量存储在全局
-                        }
-
-                        //地图事件设置函数：
-                        function setMapEvent(){
-                            map.disableDragging();//禁用地图拖拽事件
-                            map.disableScrollWheelZoom();//禁用地图滚轮放大缩小，默认禁用(可不写)
-                            map.disableDoubleClickZoom();//禁用鼠标双击放大
-                            map.disableKeyboard();//禁用键盘上下左右键移动地图，默认禁用(可不写)
-                        }
-
-                        //地图控件添加函数：
-                        function addMapControl(){
-                        }
-
-                        //标注点数组
-                        var markerArr = [{title:"北京智汇九诚国际知识产权代理有限公司",content:"我的备注",point:"116.331276|39.889304",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
-                        ];
-                        //创建marker
-                        function addMarker(){
-                            for(var i=0;i<markerArr.length;i++){
-                                var json = markerArr[i];
-                                var p0 = json.point.split("|")[0];
-                                var p1 = json.point.split("|")[1];
-                                var point = new BMap.Point(p0,p1);
-                                var iconImg = createIcon(json.icon);
-                                var marker = new BMap.Marker(point,{icon:iconImg});
-                                var iw = createInfoWindow(i);
-                                var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
-                                marker.setLabel(label);
-                                map.addOverlay(marker);
-                                label.setStyle({
-                                    borderColor:"#808080",
-                                    color:"#333",
-                                    cursor:"pointer"
-                                });
-
-                                (function(){
-                                    var index = i;
-                                    var _iw = createInfoWindow(i);
-                                    var _marker = marker;
-                                    _marker.addEventListener("click",function(){
-                                        this.openInfoWindow(_iw);
-                                    });
-                                    _iw.addEventListener("open",function(){
-                                        _marker.getLabel().hide();
-                                    })
-                                    _iw.addEventListener("close",function(){
-                                        _marker.getLabel().show();
-                                    })
-                                    label.addEventListener("click",function(){
-                                        _marker.openInfoWindow(_iw);
-                                    })
-                                    if(!!json.isOpen){
-                                        label.hide();
-                                        _marker.openInfoWindow(_iw);
-                                    }
-                                })()
-                            }
-                        }
-                        //创建InfoWindow
-                        function createInfoWindow(i){
-                            var json = markerArr[i];
-                            var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
-                            return iw;
-                        }
-                        //创建一个Icon
-                        function createIcon(json){
-                            var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
-                            return icon;
-                        }
-
-                        initMap();//创建和初始化地图
-                    </script>
                 </div>
             </section>
         </div>
