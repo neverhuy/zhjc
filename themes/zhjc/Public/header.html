@@ -36,13 +36,13 @@
     </div>
     <div class="nav">
         <div class="w1000 center clearfix">
-            <a href="/">首页</a>
-            <a href="/index.php?g=portal&m=index&a=area" >业务范围</a>
-            <a href="/index.php?g=portal&m=index&a=about">关于我们</a>
-            <a href="/index.php?g=portal&m=index&a=share">案例分享</a>
-            <a href="/index.php?g=portal&m=index&a=law">法律法规</a>
-            <a href="/index.php?g=portal&m=index&a=trade">知识产权交易</a>
-            <a href="/index.php?g=portal&m=index&a=contact">联系我们</a>
+            <a <if condition="$title eq '首页'">class = "active"</if> href="/">首页</a>
+            <a <if condition="$title eq '业务范围'">class = "active"</if> href="/index.php?g=portal&m=index&a=area" >业务范围</a>
+            <a <if condition="$title eq '关于我们'">class = "active"</if> href="/index.php?g=portal&m=index&a=about">关于我们</a>
+            <a <if condition="$title eq '案例分享'">class = "active"</if> href="/index.php?g=portal&m=index&a=share">案例分享</a>
+            <a <if condition="$title eq '法律法规'">class = "active"</if> href="/index.php?g=portal&m=index&a=law">法律法规</a>
+            <a <if condition="$title eq '知识产权交易'">class = "active"</if> href="/index.php?g=portal&m=index&a=trade">知识产权交易</a>
+            <a <if condition="$title eq '联系我们'">class = "active"</if> href="/index.php?g=portal&m=index&a=contact">联系我们</a>
         </div>
     </div>
 

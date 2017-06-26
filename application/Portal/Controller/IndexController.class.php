@@ -76,6 +76,7 @@ class IndexController extends HomebaseController
         $article = M('Posts')->where("post_title like '$key%' ")->select();
         $this->assign('cat', $key);
         $this->assign('article', $article[0]);
+        $this->assign('title', '业务范围');
         $this->display(':area');
     }
 
