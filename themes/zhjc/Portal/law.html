@@ -1,10 +1,9 @@
 <tc_include file="Public:header"/>
 
 <div class="top-banner">
-    <img src="../Public/assets/img/bannerBg.jpg" alt="">
-    <p>法律法规</p>
+    <img src="../Public/assets/img/imgLaws.jpg" alt="">
 </div>
-<div class="p30">
+<div class="bg p30">
 
     <div class='w1000 center route'>
         <span>您的位置：</span><a href="/">首页</a> <span> > </span><a href="#">法律法规</a>
@@ -14,24 +13,14 @@
         $tag = 'cid:6;order:post_date desc';
         $posts = sp_sql_posts_paged($tag,2);
     ?>
-    <div class="case-content w1000 center ">
+    <div class="case-content w1000 center law-center">
         <foreach name="posts['posts']" item="vo">
-            <div class="case-item clearfix">
+            <div class="law-item">
                 <php>
                     $smeta=json_decode($vo['smeta'],true);
                 </php>
-                <div class="fl thumb">
-                    <img src="/data/upload/{$smeta.thumb}" alt="">
-                </div>
-                <div class="fr item">
-                    <div class="title"><a href="#">{$vo.post_title}</a></div>
-                    <div class="summary">
-                        {$vo.post_excerpt}
-                    </div>
-                    <div>
-                        <a class="detail" href="#">详细>></a>
-                    </div>
-                </div>
+                <a href="#" class="law-item-title">{$vo.post_title}</a>
+                <a href="#" class="law-more">更多>></a>
             </div>
         </foreach>
     </div>
