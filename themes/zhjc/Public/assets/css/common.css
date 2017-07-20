@@ -652,12 +652,12 @@ ul, li {
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #f0f0f0;
-    height: 190px;
+    height: 150px;
 }
 
 .case-item .thumb {
     width: 230px;
-    height: 190px;
+    height: 150px;
     overflow: hidden;
     text-align: center;
 }
@@ -685,6 +685,8 @@ ul, li {
     font-size: 14px;
     color: #999999;
     line-height: 30px;
+    height: 66px;
+    overflow: hidden;
 }
 
 .case-item .detail {
