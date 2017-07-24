@@ -11,9 +11,27 @@
     <script src="__TMPL__Public/assets/js/common.js"></script>
     <!--引用百度地图API-->
     <style type="text/css">
-        html,body{margin:0;padding:0;}
-        .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
-        .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .iw_poi_title {
+            color: #CC5522;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+            padding-right: 13px;
+            white-space: nowrap
+        }
+
+        .iw_poi_content {
+            font: 12px arial, sans-serif;
+            overflow: visible;
+            padding-top: 4px;
+            white-space: -moz-pre-wrap;
+            word-wrap: break-word
+        }
     </style>
     <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
@@ -36,23 +54,36 @@
     </div>
     <div class="nav">
         <div class="w1000 center">
-            <a <if condition="$title eq '首页'">class = "active"</if> href="/">首页</a>
-            <a class="has-dropdown <if condition="$title eq '业务范围'">active</if>" href="/index.php?g=portal&m=index&a=area" >服务领域
-              <div class="dropdown-list">
-                    <a href="#">商标</a>
-                    <a href="#">版权</a>
-                    <a href="#">驰名商标</a>
-                    <a href="#">著名商标</a>
-                    <a href="#">侵权维权</a>
-                    <a href="#">特许备案</a>
-                    <a href="#">高新认定</a>
-                </div>
+            <a
+            <if condition="$title eq '首页'">class = "active"</if>
+            href="/">首页</a>
+            <a class="has-dropdown"
+            href="/index.php?g=portal&m=index&a=area" >服务领域
+            <div class="dropdown-list">
+                <a href="#">商标</a>
+                <a href="#">版权</a>
+                <a href="#">驰名商标</a>
+                <a href="#">著名商标</a>
+                <a href="#">侵权维权</a>
+                <a href="#">特许备案</a>
+                <a href="#">高新认定</a>
+            </div>
             </a>
-            <a <if condition="$title eq '关于我们'">class = "active"</if> href="/index.php?g=portal&m=index&a=about">关于我们</a>
-            <a <if condition="$title eq '案例分享'">class = "active"</if> href="/index.php?g=portal&m=index&a=share">知识产权资讯</a>
-            <a <if condition="$title eq '法律法规'">class = "active"</if> href="/index.php?g=portal&m=index&a=law">法律法规</a>
-            <a <if condition="$title eq '知识产权交易'">class = "active"</if> href="/index.php?g=portal&m=index&a=trade">知识产权交易</a>
-            <a <if condition="$title eq '联系我们'">class = "active"</if> href="/index.php?g=portal&m=index&a=contact">联系我们</a>
+            <a
+            <if condition="$title eq '关于我们'">class = "active"</if>
+            href="/index.php?g=portal&m=index&a=about">关于我们</a>
+            <a
+            <if condition="$title eq '案例分享'">class = "active"</if>
+            href="/index.php?g=portal&m=index&a=share">知识产权资讯</a>
+            <a
+            <if condition="$title eq '法律法规'">class = "active"</if>
+            href="/index.php?g=portal&m=index&a=law">法律法规</a>
+            <a
+            <if condition="$title eq '知识产权交易'">class = "active"</if>
+            href="/index.php?g=portal&m=index&a=trade">知识产权交易</a>
+            <a
+            <if condition="$title eq '联系我们'">class = "active"</if>
+            href="/index.php?g=portal&m=index&a=contact">联系我们</a>
         </div>
     </div>
 
