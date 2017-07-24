@@ -106,7 +106,7 @@ ul, li {
     height:50px;
     background: #0ba694;
 }
-#header .nav a{
+#header .nav a,#header .nav .nav-item{
     display: block;
     float:left;
     width: 140px;
@@ -115,7 +115,7 @@ ul, li {
     color:#ffffff;
     line-height:50px;
 }
-#header .nav a.active{
+#header .nav a.active,#header .nav .nav-item.active{
     background: #068879;
 }
 #header .has-dropdown{
