@@ -57,7 +57,7 @@
             <a
             <if condition="$title eq '首页'">class = "active"</if>
             href="/">首页</a>
-            <a class="has-dropdown"
+            <a class="has-dropdown <if condition=" $title eq '业务范围'">active</if>"
             href="/index.php?g=portal&m=index&a=area" >服务领域
             <div class="dropdown-list">
                 <a href="#">商标</a>
