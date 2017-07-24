@@ -23,22 +23,22 @@
         <div class="w1000 center clearfix">
             <div class="logo fl">
                 <a href="/">
-                    <img src="__TMPL__Public/img/logo.png" alt="logo">
+                    <img src="__TMPL__Public/assets/img/logo.png" alt="logo">
                 </a>
             </div>
             <div class="slogn fl">
-                <img src="__TMPL__Public/img/slogn.jpg" alt="slogn">
+                <img src="__TMPL__Public/assets/img/slogn.jpg" alt="slogn">
             </div>
             <div class="phone fr">
-                <img src="__TMPL__Public/img/phone.jpg" alt="phone">
+                <img src="__TMPL__Public/assets/img/phone.jpg" alt="phone">
             </div>
         </div>
     </div>
     <div class="nav">
-        <div class="w1000 center">
-            <a href="/">首页</a>
-            <a href="/index.php?g=portal&m=index&a=area" class="has-dropdown">服务领域
-                <div class="dropdown-list">
+        <div class="w1000 center clearfix">
+            <a <if condition="$title eq '首页'">class = "active"</if> href="/">首页</a>
+            <a <if condition="$title eq '业务范围'">class = "active"</if> href="/index.php?g=portal&m=index&a=area" >服务领域
+              <div class="dropdown-list">
                     <a href="#">商标</a>
                     <a href="#">版权</a>
                     <a href="#">驰名商标</a>
@@ -48,11 +48,11 @@
                     <a href="#">高新认定</a>
                 </div>
             </a>
-            <a href="/index.php?g=portal&m=index&a=about">关于我们</a>
-            <a href="/index.php?g=portal&m=index&a=share">知识产权资讯</a>
-            <a href="/index.php?g=portal&m=index&a=law">法律法规</a>
-            <a href="/index.php?g=portal&m=index&a=trade">知识产权交易</a>
-            <a href="/index.php?g=portal&m=index&a=about">联系我们</a>
+            <a <if condition="$title eq '关于我们'">class = "active"</if> href="/index.php?g=portal&m=index&a=about">关于我们</a>
+            <a <if condition="$title eq '案例分享'">class = "active"</if> href="/index.php?g=portal&m=index&a=share">知识产权资讯</a>
+            <a <if condition="$title eq '法律法规'">class = "active"</if> href="/index.php?g=portal&m=index&a=law">法律法规</a>
+            <a <if condition="$title eq '知识产权交易'">class = "active"</if> href="/index.php?g=portal&m=index&a=trade">知识产权交易</a>
+            <a <if condition="$title eq '联系我们'">class = "active"</if> href="/index.php?g=portal&m=index&a=contact">联系我们</a>
         </div>
     </div>
 

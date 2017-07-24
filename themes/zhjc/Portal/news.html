@@ -1,18 +1,17 @@
 <tc_include file="Public:header"/>
 
 <div class="top-banner">
-    <img src="__TMPL__Public/assets/img/imgIntellectual.jpg" alt="">
-    <p>知识产权交易</p>
-
+    <img src="__TMPL__Public/assets/img/bannerBg.jpg" alt="">
+    <p>企业动态</p>
 </div>
-<div class="p30">
+<div class="bg p30">
 
     <div class='w1000 center route'>
-        <span>您的位置：</span><a href="/">首页</a> <span> > </span><a href="#">知识产权交易</a>
+        <span>您的位置：</span><a href="/">首页</a> <span> > </span><a href="#">企业动态</a>
     </div>
 
     <?php
-        $tag = 'cid:7;order:post_date desc';
+        $tag = 'cid:10;order:post_date desc';
         $posts = sp_sql_posts_paged($tag,2);
     ?>
     <div class="case-content w1000 center ">
@@ -25,12 +24,12 @@
                     <img src="/data/upload/{$smeta.thumb}" alt="">
                 </div>
                 <div class="fr item">
-                    <div class="title"><a href="#">{$vo.post_title}</a></div>
+                    <div class="title"><a href="/index.php?g=portal&m=index&a=detail&pid={$vo.object_id}">{$vo.post_title}</a></div>
                     <div class="summary">
                         {$vo.post_excerpt}
                     </div>
                     <div>
-                        <a class="detail" href="#">详细>></a>
+                        <a class="detail" href="/index.php?g=portal&m=index&a=detail&pid={$vo.object_id}">详细>></a>
                     </div>
                 </div>
             </div>

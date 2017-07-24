@@ -99,42 +99,25 @@
 
     <!--企业动态-->
     <div class="state">
+        <php>
+            $tag = 'cid:10;order:post_date desc';
+            $news = sp_sql_posts_paged($tag,5);
+        </php>
         <div class="floor w1000 center">
             <h2>BUSINESS MOVEMENT</h2>
             <h3>知识产权资讯</h3>
             <section>
-                <div class="item item1">
-                    <p>2017-10-10</p>
-                    <p>
-                        我司代理“特化苏”家具类商标三成功驰名商标“九里诱惑”
-                    </p>
-                </div>
-                <div class="item item2">
-                    <p>2017-10-10</p>
-                    <p>
-                        我司代理“特化苏”家具类商标三成功驰名商标“九里诱惑”
-                    </p>
-                </div>
-                <div class="item item3">
-                    <p>2017-10-10</p>
-                    <p>
-                        我司代理“特化苏”家具类商标三成功驰名商标“九里诱惑”
-                    </p>
-                </div>
-                <div class="item item4">
-                    <p>2017-10-10</p>
-                    <p>
-                        我司代理“特化苏”家具类商标三成功驰名商标“九里诱惑”
-                    </p>
-                </div>
-                <div class="item item5">
-                    <p>2017-10-10</p>
-                    <p>
-                        我司代理“特化苏”家具类商标三成功驰名商标“九里诱惑”
-                    </p>
-                </div>
+                <foreach name="news['posts']" item="vo" key="k">
+                    <div class="item item{$k + 1}">
+                        <p>{$vo['post_date']|substr=0,10}</p>
+                        <p>
+                            <a style="color: #fff" href="/index.php?g=portal&m=index&a=detail&pid={$vo.object_id}">{$vo.post_title}</a>
+                        </p>
+                    </div>
+                </foreach>
+
             </section>
-            <a class='more center' href="#">查看更多</a>
+            <a class='more center' href="/index.php?g=portal&m=index&a=news">查看更多</a>
         </div>
     </div>
 
@@ -154,7 +137,7 @@
                 <div class="right fr">
                     <div style="width:597px;height:256px;border:#ccc solid 1px;" id="dituContent">
                         <a href="http://ditu.amap.com/search?id=B000A80WQ2&city=110102&geoobj=116.508685%7C39.903527%7C116.512859%7C39.905218&query_type=IDQ&query=%E5%8D%8E%E7%9D%A6%E5%A4%A7%E5%8E%A6&zoom=18">
-                            <img src="../Public/assets/img/map.jpg" alt="" style="width: 100%;">
+                            <img src="__TMPL__Public/assets/img/map.jpg" alt="" style="width: 100%;">
                         </a>
                     </div>
                     <!--百度地图容器-->
