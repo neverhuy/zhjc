@@ -118,6 +118,28 @@ ul, li {
 #header .nav a.active{
     background: #068879;
 }
+#header .has-dropdown{
+    position: relative;
+}
+#header .has-dropdown:hover .dropdown-list{
+    display: block;
+}
+#header .dropdown-list{
+    width: 140px;
+    position: absolute;
+    top: 49px;
+    left: 0px;
+    color: #ffffff;
+    z-index: 9999;
+    background: #0ba694;
+    display: none;
+}
+#header .dropdown-list a:hover{
+    display: block;
+}
+#header .dropdown-list a:hover,#header .dropdown-list a.active{
+    background: #068879;
+}
 /*footer*/
 #footer {
     height: 260px;
@@ -652,12 +674,12 @@ ul, li {
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #f0f0f0;
-    height: 190px;
+    height: 150px;
 }
 
 .case-item .thumb {
     width: 230px;
-    height: 190px;
+    height: 150px;
     overflow: hidden;
     text-align: center;
 }
@@ -685,6 +707,8 @@ ul, li {
     font-size: 14px;
     color: #999999;
     line-height: 30px;
+    height: 66px;
+    overflow: hidden;
 }
 
 .case-item .detail {
@@ -893,4 +917,44 @@ ul, li {
 
 /*业务范围-驰名商标页面 end*/
 
+/*法律法规列表页面*/
+.law-center{
+    background: #ffffff;
+}
+.law-item{
+    height: 70px;
+    border-bottom:1px solid #f4f4f4;
+    line-height: 70px;
+    position:relative;
+    padding-right:70px;
+    padding-left: 30px;
+}
+.law-item:last-child{
+    border-bottom: none;
+}
+.law-item a.law-item-title{
+    text-align: left;
+    display: block;
+    color:#666666;
+    font-size: 18px;
+}
+.law-item a.law-item-title:before{
+    content: '■';
+    display: inline-block;
+    line-height: 70px;
+    margin-right: 26px;
+    font-size:12px;
+    vertical-align: middle;
+}
+
+.law-item a.law-more{
+    text-align: right;
+    position: absolute;
+    display: block;
+    height: 70px;
+    top:0px;
+    right: 20px;
+    color:#0ba694;
+    font-size: 14px;
+}
 
