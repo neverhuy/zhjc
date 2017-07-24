@@ -65,6 +65,9 @@ class IndexController extends HomebaseController
         $this->assign('title', '文章详情');
         $this->assign('pid', $post_id);
 
+        $term = M('TermRelationships')->where("object_id = $post_id")->select();
+        $this->assign('tid', $term[0]['term_id']);
+
         $this->display(':article');
     }
 

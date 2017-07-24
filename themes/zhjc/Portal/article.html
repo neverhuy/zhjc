@@ -1,13 +1,14 @@
-<tc_include file="Public:header" />
+<tc_include file="Public:header"/>
 
 <div class="p30">
-    <div class='w1000 center route'>
-        <span>您的位置：</span><a href="/">首页</a> <span> > </span><a href="#">内容详情</a>
-    </div>
-
     <php>
         $post = sp_sql_post($pid);
+        $term = sp_get_term($tid);
     </php>
+    <div class='w1000 center route'>
+        <span>您的位置：</span><a href="/">首页</a> <span> > </span><a href="#">{$term.name}</a>
+        <span> > </span> <a href="#">{$post.post_title} </a>
+    </div>
     <div class="article center ">
         <h3 class="title">{$post.post_title}</h3>
         <section>
@@ -15,4 +16,4 @@
         </section>
     </div>
 </div>
-<tc_include file="Public:footer" />
+<tc_include file="Public:footer"/>
