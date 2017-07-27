@@ -957,4 +957,6 @@ ul, li {
     color:#0ba694;
     font-size: 14px;
 }
-
+.banner .slider .bx-has-controls-direction{
+    display: none;
+}
