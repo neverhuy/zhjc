@@ -19,8 +19,8 @@
                 <php>
                     $smeta=json_decode($vo['smeta'],true);
                 </php>
-                <a href="#" class="law-item-title">{$vo.post_title}</a>
-                <a href="#" class="law-more">更多>></a>
+                <a href="/index.php?g=portal&m=index&a=detail&pid={$vo.object_id}" class="law-item-title">{$vo.post_title}</a>
+                <a href="/index.php?g=portal&m=index&a=detail&pid={$vo.object_id}" class="law-more">更多>></a>
             </div>
         </foreach>
     </div>
