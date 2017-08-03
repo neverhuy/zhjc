@@ -10,17 +10,20 @@
     </div>
     <div class="w1000 center clearfix">
         <div class="p-left-side fl clearfix">
-            <a href="#">商标</a>
-            <a href="#" class="active">版权</a>
-            <a href="#">驰名商标</a>
-            <a href="#">著名商标</a>
-            <a href="#">侵权维权</a>
-            <a href="#">特许备案</a>
-            <a href="#">高新认定</a>
+            <a href="/index.php?g=portal&m=index&a=area&pid=40" <if condition="$category eq '商标'">class = "active"</if> >商标</a>
+            <a href="/index.php?g=portal&m=index&a=area&pid=41" <if condition="$category eq '版权'">class = "active"</if> >版权</a>
+            <a href="/index.php?g=portal&m=index&a=area&pid=42" <if condition="$category eq '驰名商标'">class = "active"</if> >驰名商标</a>
+            <a href="/index.php?g=portal&m=index&a=area&pid=43" <if condition="$category eq '著名商标'">class = "active"</if> >著名商标</a>
+            <a href="/index.php?g=portal&m=index&a=area&pid=44" <if condition="$category eq '侵权维权'">class = "active"</if> >侵权维权</a>
+            <a href="/index.php?g=portal&m=index&a=area&pid=45" <if condition="$category eq '特许备案'">class = "active"</if> >特许备案</a>
+            <a href="/index.php?g=portal&m=index&a=area&pid=46" <if condition="$category eq '高新认定'">class = "active"</if> >高新认定</a>
         </div>
         <div class="p-right ">
             <div class="p-content">
-                contents here~
+                <php>
+                    $post = sp_sql_post($pid);
+                </php>
+                {$post.post_content}
             </div>
         </div>
     </div>

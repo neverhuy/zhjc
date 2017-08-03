@@ -74,14 +74,21 @@ class IndexController extends HomebaseController
     // 业务范围
     public function area()
     {
-        $key = I('get.cat', '驰名商标');
+        $pid      = 40;
+        $category = "商标";
 
-        $article = M('Posts')->where("post_title like '$key%' ")->select();
-        $this->assign('cat', $key);
-        $this->assign('article', $article[0]);
-        $this->assign('title', '业务范围');
+        if (isset($_GET['pid'])) {
+            $pid      = $_GET['pid'];
+            $post     = M('Posts')->where("id = $pid")->select();
+            $category = $post[0]['post_title'];
+        }
+
+        $this->assign('pid', $pid);
+        $this->assign('category', $category);
+        $this->assign('title', '服务领域');
         $this->display(':area');
     }
+
 
     // 企业动态
     public function news()
