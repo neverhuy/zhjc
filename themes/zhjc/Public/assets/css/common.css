@@ -58,73 +58,88 @@ ul, li {
 /*公共样式 start*/
 
 /*header*/
-#header{
+#header {
 }
-#header .top{
-    height:116px;
+
+#header .top {
+    height: 116px;
 }
-#header .other{
-    height:20px;
-    margin-top:60px;
+
+#header .other {
+    height: 20px;
+    margin-top: 60px;
 }
-#header .other a.no-border{
-    border:none;
+
+#header .other a.no-border {
+    border: none;
 }
-#header .other a{
-    font-size:14px;
+
+#header .other a {
+    font-size: 14px;
     line-height: 20px;
     display: inline-block;
     padding-right: 10px;
     padding-left: 10px;
 }
-#header .top .logo{
+
+#header .top .logo {
     margin-top: 15px;
     display: block;
 }
-#header .top .slogn{
+
+#header .top .slogn {
     width: 345px;
-    height:28px;
+    height: 28px;
     margin-top: 53px;
     margin-left: 40px;
 }
-#header .top .slogn img{
+
+#header .top .slogn img {
     width: 345px;
-    height:28px;
+    height: 28px;
 }
-#header .phone{
+
+#header .phone {
     width: 216px;
-    height:54px;
-    margin-top:41px;
-    margin-right:49px;
+    height: 54px;
+    margin-top: 41px;
+    margin-right: 49px;
 }
-#header .phone img{
+
+#header .phone img {
     width: 216px;
-    height:54px;
+    height: 54px;
 }
+
 /*nav*/
-#header .nav{
-    height:50px;
+#header .nav {
+    height: 50px;
     background: #0ba694;
 }
-#header .nav a,#header .nav .nav-item{
+
+#header .nav a, #header .nav .nav-item {
     display: block;
-    float:left;
+    float: left;
     width: 140px;
     text-align: center;
     font-size: 16px;
-    color:#ffffff;
-    line-height:50px;
+    color: #ffffff;
+    line-height: 50px;
 }
-#header .nav a.active,#header .nav .nav-item.active{
+
+#header .nav a.active, #header .nav .nav-item.active {
     background: #068879;
 }
-#header .has-dropdown{
+
+#header .has-dropdown {
     position: relative;
 }
-#header .has-dropdown:hover .dropdown-list{
+
+#header .has-dropdown:hover .dropdown-list {
     display: block;
 }
-#header .dropdown-list{
+
+#header .dropdown-list {
     width: 140px;
     position: absolute;
     top: 49px;
@@ -134,12 +149,15 @@ ul, li {
     background: #0ba694;
     display: none;
 }
-#header .dropdown-list a:hover{
+
+#header .dropdown-list a:hover {
     display: block;
 }
-#header .dropdown-list a:hover,#header .dropdown-list a.active{
+
+#header .dropdown-list a:hover, #header .dropdown-list a.active {
     background: #068879;
 }
+
 /*footer*/
 #footer {
     height: 260px;
@@ -224,14 +242,14 @@ ul, li {
 }
 
 /*路由位置*/
-.route{
+.route {
     padding-top: 25px;
     padding-bottom: 25px;
     font-size: 16px;
-    color:#666666;
+    color: #666666;
     background-image: url(../img/location.png);
     padding-left: 30px;
-    height:26px;
+    height: 26px;
     background-repeat: no-repeat;
     background-position: left center;
     line-height: 26px;
@@ -241,30 +259,34 @@ ul, li {
 
 /*分页组件*/
 
-.pager{
+.pager {
     display: inline-block;
     text-align: center;
 }
-.pager li{
+
+.pager li {
     display: inline-block;
-    height:35px;
+    height: 35px;
     line-height: 35px;
     min-width: 35px;
-    padding-left:10px;
-    padding-right:10px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 14px;
-    color:#666666;
+    color: #666666;
     cursor: pointer;
-    margin-right:5px
+    margin-right: 5px
 }
-.pager li:hover,.pager li.active{
+
+.pager li:hover, .pager li.active {
     background: #0ba694;
 }
-.pager li:hover a,.pager li.active a{
-    color:#ffffff;
+
+.pager li:hover a, .pager li.active a {
+    color: #ffffff;
 }
-.pager span.current{
-    color:#ffffff;
+
+.pager span.current {
+    color: #ffffff;
 }
 
 /*banner*/
@@ -375,9 +397,10 @@ ul, li {
     border: 1px solid #e4e4e4;
 }
 
-.business .bx-viewport{
+.business .bx-viewport {
     width: 103% !important;
 }
+
 .business .bx-wrapper .bx-viewport {
     border: none;
     -moz-box-shadow: none;
@@ -646,11 +669,12 @@ ul, li {
     position: relative;
     font-size: 25px;
 }
-.top-banner p{
+
+.top-banner p {
     display: block;
     position: absolute;
     font-size: 16px;
-    color:#f5f5f5;
+    color: #f5f5f5;
     width: 100%;
     height: 30px;
     line-height: 30px;
@@ -755,13 +779,13 @@ ul, li {
     background: #f5f5f5;
 }
 
-
-.advantage-bg{
+.advantage-bg {
     background-repeat: no-repeat;
     background-image: url('../img/about.png');
     background-position: center;
     height: 100%;
 }
+
 .intro h3, .culture h3 {
     margin-bottom: 40px;
     font-weight: normal;
@@ -918,46 +942,93 @@ ul, li {
 /*业务范围-驰名商标页面 end*/
 
 /*法律法规列表页面*/
-.law-center{
+.law-center {
     background: #ffffff;
 }
-.law-item{
+
+.law-item {
     height: 70px;
-    border-bottom:1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
     line-height: 70px;
-    position:relative;
-    padding-right:70px;
+    position: relative;
+    padding-right: 70px;
     padding-left: 30px;
 }
-.law-item:last-child{
+
+.law-item:last-child {
     border-bottom: none;
 }
-.law-item a.law-item-title{
+
+.law-item a.law-item-title {
     text-align: left;
     display: block;
-    color:#666666;
+    color: #666666;
     font-size: 18px;
 }
-.law-item a.law-item-title:before{
+
+.law-item a.law-item-title:before {
     content: '■';
     display: inline-block;
     line-height: 70px;
     margin-right: 26px;
-    font-size:12px;
+    font-size: 12px;
     vertical-align: middle;
 }
 
-.law-item a.law-more{
+.law-item a.law-more {
     text-align: right;
     position: absolute;
     display: block;
     height: 70px;
-    top:0px;
+    top: 0px;
     right: 20px;
-    color:#0ba694;
+    color: #0ba694;
     font-size: 14px;
 }
-.banner .bx-has-controls-direction{
+
+.banner .bx-has-controls-direction {
     display: none;
+}
+
+.p-left-side {
+    width: 228px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+.p-left-side a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #666666;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+}
+
+.p-left-side a:after {
+    content: '>';
+    position: absolute;
+    line-height: 50px;
+    height: 50px;
+    font-size: 20px;
+    top: 0px;
+    right: 30px;
+}
+
+.p-left-side a.active, .p-left-side a:hover {
+    color: #ffffff;
+    background: #0ba694;
+}
+
+.p-right {
+    padding-left: 256px;
+}
+
+.p-right .p-content {
+    margin-left: 10px;
+    background: #ffffff;
+    height: 200px;
 }
 

@@ -1,84 +1,30 @@
 <tc_include file="Public:header"/>
 
-<div class="content ">
-    <!--业务范围-->
-    <div class="business">
-        <div class="floor w1000 center">
-            <h2>SCOPE OF BUSINESS</h2>
-            <h3>业务范围</h3>
-            <!--slider start-->
-            <div class="slider" id='slider2'>
-                <a href="/index.php?g=portal&m=index&a=area" style="display:block;" class='slide item1 <if condition="$cat eq 驰名商标 ">active</if>'>
-                    <p class="item_img center"></p>
-                    <p class="item_title">驰名商标</p>
-                    <p class="item_title2">The urgent problems</p>
-                </a>
+<body>
+<div class="top-banner">
+    <img src="__TMPL__Public/assets/img/service.jpg" alt="">
+</div>
 
-                <a href="/index.php?g=portal&m=index&a=area&cat=加急疑难" style="display: block" class='slide item2 <if condition="$cat eq 加急疑难">active</if>'>
-                    <p class="item_img center"></p>
-                    <p class="item_title">加急疑难</p>
-                    <p class="item_title2"> Commercial franchise record </p>
-                </a>
-                <a href="/index.php?g=portal&m=index&a=area&cat=商业特许备案" style="display: block" class='slide item3 <if condition="$cat eq 商业特许备案">active</if>'>
-                    <p class="item_img center"></p>
-                    <p class="item_title">商业特许备案</p>
-                    <p class="item_title2"> Commercial franchise record</p>
-                </a>
-                <a href="/index.php?g=portal&m=index&a=area&cat=商标注册" style="display: block" class='slide item4 <if condition="$cat eq 商标注册">active</if>'>
-                    <p class="item_img center"></p>
-                    <p class="item_title">商标注册</p>
-                    <p class="item_title2">Trademark registration</p>
-                </a>
-                <a href="/index.php?g=portal&m=index&a=area&cat=商标转让" style="display: block" class='slide item5 <if condition="$cat eq 商标转让 ">active</if>'>
-                    <p class="item_img center"></p>
-                    <p class="item_title">商标转让/变更</p>
-                    <p class="item_title2">Trademark transfer / change</p>
-                </a>
-            </div>
-            <!--slider end-->
-        </div>
+<div class="p30">
+    <div class='w1000 center route'>
+        <span>您的位置：</span><a href="/">首页</a> <span> > </span><a href="#">内容详情</a>
     </div>
-    <!--驰名商标动态-->
-    <if condition="$cat eq '驰名商标'">
-        <div class="brand">
-            <div class="floor w1000 center">
-                <h2>Well known trademark</h2>
-                <h3>驰名商标动态</h3>
-                <section class="clearfix">
-                    <div class="fl brand-img"></div>
-                    <php>
-                        $tag = 'cid:4;order:post_date desc';
-                        $posts = sp_sql_posts($tag,8);
-                    </php>
-                    <div class="fr brand-items">
-                        <foreach name="posts" item="vo">
-                            <div class="brand-item">
-                                <div class="title"><a href="/index.php?g=portal&m=index&a=detail&pid={$vo.object_id}">{$vo.post_title}</a></div>
-                                <div class="summary">
-                                    {$vo.post_excerpt}
-                                </div>
-                                <div><a class="detail" href="/index.php?g=portal&m=index&a=detail&pid={$vo.object_id}"> 详细>></a></div>
-                            </div>
-                        </foreach>
-
-                    </div>
-                </section>
-            </div>
+    <div class="w1000 center clearfix">
+        <div class="p-left-side fl clearfix">
+            <a href="#">商标</a>
+            <a href="#" class="active">版权</a>
+            <a href="#">驰名商标</a>
+            <a href="#">著名商标</a>
+            <a href="#">侵权维权</a>
+            <a href="#">特许备案</a>
+            <a href="#">高新认定</a>
         </div>
-    </if>
-    <!--案例剖析-->
-    <div class="analysis">
-        <div class="floor w1000 center">
-            <h2>Case analysis</h2>
-            <h3>{$cat}</h3>
-            <div class="analy">
-                <section>
-                    {$article.post_content}
-                </section>
+        <div class="p-right ">
+            <div class="p-content">
+                contents here~
             </div>
         </div>
     </div>
-
 </div>
 
 <tc_include file="Public:footer"/>
